@@ -1,0 +1,161 @@
+:root{
+    --bg: #FBF6FA;
+    --btn: #EBD5E8;
+    --dark: #2C1429;
+    --footer: #E9CFE5;
+    --subs: #EB96DF;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    margin: 0px;
+    box-sizing: border-box;    
+    background-color: var(--bg);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#logo{
+    height: 50px;
+}
+
+.navbar{
+    margin: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    /* border: solid black 1px; */
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    margin-right: 10rem;
+    margin-left: 4rem;
+}
+
+.navbar-left>div{
+    margin-left: 20px;
+    padding: 5px 10px;
+    width: 45px;
+    text-align: center;
+}
+
+.current{
+    background-color: var(--dark);
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.current a{
+    color: white;
+}
+
+.search{
+    background-color: var(--btn);
+    width: 160px;
+    padding: 2px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#search{
+    width: 130px;
+    background-color: var(--btn);
+    border: 0px;
+}
+
+#search-icon{
+    width: 10px;
+}
+
+.navbar-right{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar-right>div{
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-right>div>button{
+    width: 80px;
+    border: none;    
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: var(--btn);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.content{
+    border-top: 1px solid var(--dark);
+}
+
+.footer{
+    background-color: var(--footer);
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer>div{
+    margin: 0px 100px;
+}
+
+.footer-left>div:first-child p{
+    font-size: 25px;
+}
+
+.footer-left>div p{
+    margin: 0px;
+    font-size: 10px;
+}
+
+#subscription{
+    font-size: 10px;
+    width: 180px;
+    height: 15px;
+}
+
+.footer-left>div button{
+    margin-top: 10px;
+    width: 70px;
+    border: none;    
+    padding: 5px 2px;
+    border-radius: 20px;
+    background-color: var(--subs);
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-size: 8px;
+}
+
+.footer-right{
+    padding-top: 67px;
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: right;
+}
+
+.social-media img{
+    height: 30px;
+}
+
+/* 
+.footer-left{
+    border: black 1px solid;
+}
+.footer-right{
+    border: black 1px solid;
+} */
