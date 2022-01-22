@@ -1,5 +1,4 @@
 .content{
-    width: 1190px;
     height: 551px;
     margin: auto;
 }
@@ -9,6 +8,8 @@
     padding: 1%;
     padding-bottom: 4%;
     height: 20%;
+    width: 1190px;
+    margin: auto;
 }
 
 .content-top-title{
@@ -38,6 +39,8 @@
 .content-bottom{
     padding: 1%;
     height: 80%;
+    width: 1190px;
+    margin: auto;
 }
 
 .section{
@@ -56,6 +59,3 @@
 .tab{
     padding-left: 100px;
 }
-
-
-
