@@ -299,3 +299,22 @@ input[type=submit]:hover {
     margin-bottom: 4%;
     text-align: center;
 }
+
+.content-about{
+    border-top: 1px solid var(--dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.title-about{
+    margin: 0px 100px;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.desc-about{
+    margin: 0px 100px;
+    text-align: justify;
+    line-height: 1.75;
+    margin-bottom: 50px;
+}
