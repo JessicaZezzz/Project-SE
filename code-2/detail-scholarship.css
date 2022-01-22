@@ -1,0 +1,61 @@
+.content{
+    width: 1190px;
+    height: 551px;
+    margin: auto;
+}
+
+.content-top{
+    border-bottom: 2px solid black;
+    padding: 1%;
+    padding-bottom: 4%;
+    height: 20%;
+}
+
+.content-top-title{
+    font-size: 20pt;
+    padding-bottom: 5px;
+}
+
+.content-top-imagebox{
+    width: 159px;
+    height: 112px;
+    background-image: url(/assets/chevening.jpg);
+    background-size: cover;
+}
+
+.content-top-description{
+    display: flex;
+}
+
+.content-top-desc{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 12pt;
+    align-items: flex-end;
+}
+
+.content-bottom{
+    padding: 1%;
+    height: 80%;
+}
+
+.section{
+    padding-bottom: 20px;
+}
+
+.section-content{
+    display: flex;
+}
+
+.section p{
+    padding-bottom: 2px;  
+    font-size: 11pt;
+}
+
+.tab{
+    padding-left: 100px;
+}
+
+
+
