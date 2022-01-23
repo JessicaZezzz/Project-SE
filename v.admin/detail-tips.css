@@ -1,0 +1,93 @@
+.profile-button{
+    background-color: #EBD5E8;
+    display: flex;
+    align-items: center;
+    margin-right: 4%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.profile-button b{
+    padding-right: 10px;
+}
+
+.profile-button img{
+    background-color: #f8e5f5;
+}
+
+.comment-profile{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    display: flex;
+}
+
+.profile-image img{
+    width: 50px;
+    border-radius: 100%;
+    background-color: #f8e5f5;
+    padding: 10%;
+}
+
+.profile-comment-content{
+    padding-left: 2%;
+}
+
+.tab{
+    padding-left: 5%;
+}
+
+.comment-header t{
+    color: gray;
+}
+
+.profile-content{
+    padding-top: 2%;
+}
+
+.space2{
+    width: 15px;
+}
+
+.button-save{
+    display: flex;
+    flex-direction: row;
+    margin-bottom:10px;
+}
+.space{
+    width: 820px;
+}
+
+.submit1 input[type=submit] {
+    width: 50%;
+    background-color: #3a8a41;
+    color: white;
+    margin-left: 100px;
+    padding: 10px 15px;
+    margin-right:10px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+  
+.submit1 input[type=submit]:hover {
+    background-color: #26772d;
+}
+
+.submit2 input[type=submit] {
+    width: 100%;
+    background-color: #b12121;
+    color: white;
+    margin: 15px 0;
+    margin-left: 25px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+  
+.submit2 input[type=submit]:hover {
+    background-color: #a01919;
+}

@@ -1,0 +1,58 @@
+.abt1{
+    margin-top: 37px;
+    margin-bottom: 50px;
+}
+
+.pen{
+    margin-top: 37px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.desc-about-edit{
+    margin: 0px 100px;
+    text-align: justify;
+    line-height: 1.75;
+    margin-bottom: 10px;
+}
+
+.button-save{
+    display: flex;
+    flex-direction: row;
+    margin-bottom:20px;
+}
+.space{
+    width: 850px;
+}
+
+.submit1 input[type=submit] {
+    width: 50%;
+    background-color: #3a8a41;
+    color: white;
+    margin-left: 100px;
+    padding: 10px 15px;
+    margin-right:10px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+  
+.submit1 input[type=submit]:hover {
+    background-color: #26772d;
+}
+
+.submit2 input[type=submit] {
+    width: 100%;
+    background-color: #b12121;
+    color: white;
+    margin: 15px 0;
+    margin-left: 25px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+  
+.submit2 input[type=submit]:hover {
+    background-color: #a01919;
+}
