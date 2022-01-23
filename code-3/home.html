@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarPal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/assets/logo.png" id="logo">
+        </div>
+        <div class="navbar-left">
+            <div class="current">
+                <a href="/home.html">HOME</a>
+            </div>
+            <div>
+                <a href="/articles.html">ARTICLES</a>
+            </div>
+            <div>
+                <a href="/about.html">ABOUT</a>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" name="search" id="search">
+            <a href="/articles.html"><img src="/assets/search.svg" id="search-icon"></a>
+        </div>
+        <div class="navbar-right">
+            <div>
+                <button><a href="/login.html">Log In</a></button>
+            </div>
+            <div>
+                <button><a href="/login.html">Sign Up</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="content">            
+        <div class="banner">
+            <div class="mySlides fade">
+                <img src="/assets-home/friend.webp">
+                <a href="/articles.html"><div class="text">7 Domestic Scholarships Offer Free Tuition<br>for Prospective Students</div></a>
+            </div>
+            <div class="mySlides fade">
+                <img src="assets-home/uk.png">
+                <a href="/articles.html"><div class="text">Guide to<br>UK Scholarships</div></a>
+            </div>
+            <div class="mySlides fade">
+                <img src="assets-home/6 tips.jpg">
+                <a href="/articles.html"><div class="text">6 Tips to  Pass The UK Chevening<br>Fully Funded Scholarship</div></a>
+            </div>
+            <a class="left" onclick="plusSlides(-1)"><img src="/assets-home/left-arrow.png" id="left"></a>
+            <a class="right" onclick="plusSlides(1)"><img src="/assets-home/right-arrow.png" id="right"></a>
+        </div>
+        <div class="information">
+            <div class="info-left">
+                <div class="filter-title">
+                    <img src="/assets-home/filter.png" id="filter">
+                    <h2>Filter</h2>
+                    <div class="calender">
+                        <label for="start">Deadline :</label>
+                        <input type="month" id="start" name="start" min="2022-01" value="">
+                    </div>
+                </div>
+                <div class="filterninfo">
+                    <div class="filter-left">
+                        <h4>Level</h4>
+                        <div class="level">
+                            <label class="filter-box">Elementary School
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Junior High School
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Senior High School
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">D3
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">S1
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">S2
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">S3
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                        </div>
+                        <h4>Type</h4>
+                        <div class="type">
+                            <label class="filter-box">Fully Funded
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Partially Funded
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                        </div>
+                        <h4>Major</h4>
+                        <div class="major">
+                            <label class="filter-box">Accounting
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Anthropology
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Art
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Biochemistry
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box" onclick="openMajorPopup()" id="other-majors">Other majors</label>
+                        </div>
+                        <div class="region-title">
+                            <h4>Region</h4>
+                            Asia
+                            <button id="dropdown-region" onclick="openRegionPopup()"><img src="/assets-home/dropdown.png" id="dropdown"></button>
+                        </div>
+                        <div class="region">
+                            <label class="filter-box">Indonesia
+                                <input type="checkbox">
+                                <button id="dropdown-country" onclick="openCountryPopup()""><img src="/assets-home/dropdown.png" id="dropdown"></button>
+                            </label>
+                            <label class="filter-box">Jakarta
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Bandung
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box">Surabaya
+                                <input type="checkbox">
+                                <span class="filter-button"></span>
+                            </label>
+                            <label class="filter-box" onclick="openCityPopup()" id="other-city">Other city</label>
+                        </div>
+                        <div class="region-popup" id="region-function">
+                            <div>
+                                <button id="dropdown-popup" onclick="closeRegionPopup()"><img src="/assets-home/dropdown.png" id="dropdown"></button>
+                            </div>
+                            <label id="region">Asia
+                                <input type="checkbox" checked="checked">
+                                <span id="check-region"></span>
+                            </label>
+                            <label id="region">America
+                                <input type="checkbox" checked="checked">
+                                <span id="check-region""></span>
+                            </label>
+                            <label id="region">Australia
+                                <input type="checkbox" checked="checked">
+                                <span id="check-region""></span>
+                            </label>
+                            <label id="region">Europe
+                                <input type="checkbox" checked="checked">
+                                <span id="check-region""></span>
+                            </label>
+                        </div>
+                        <div class="country-popup" id="country-function">
+                            <div>
+                                <button id="dropdown-popup" onclick="closeCountryPopup()"><img src="/assets-home/dropdown.png" id="dropdown"></button>
+                            </div>
+                            <br>
+                            <div class="search-class">
+                                <input type="text" name="search-country" id="search-country">
+                                <a href=""><img src="/assets/search.svg" id="search-icon-country"></a>
+                            </div>
+                            <label id="country">Japan
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">Indonesia
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">Korea
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">India
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">Thailand
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">Myanmar
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">US
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">UK
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">Germany
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">France
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                            <label id="country">Australia
+                                <input type="checkbox" checked="checked">
+                                <span id="check-country"></span>
+                            </label>
+                        </div>
+                        <div class="major-popup" id="major-function">
+                            <div>
+                                <button id="close-popup" onclick="closeMajorPopup()"><img src="/assets-home/close.png" id="close"></button>
+                            </div>
+                            <br>
+                            <div class="major-title">
+                                <h2>Major</h2>
+                                <div class="search-popup">
+                                    <input type="text" name="search" id="search-text" placeholder="search major">
+                                    <a href=""><img src="/assets/search.svg" id="search-icon-popup"></a>
+                                </div>
+                            </div>
+                            <div class="major-list">
+                                <div class="major-left">
+                                    <label class="major-box">Accounting
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Anthropology
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Applied Math
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Art
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Biochemistry
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Biology
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Biomedical
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Business Administration
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Chemical Engineering
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Chemistry
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                </div>
+                                <div class="major-right">
+                                    <label class="major-box">Cinematograph
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Civil Engineering
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Communication
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Computer Science
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Data Science
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Economics
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Electrical Engineering
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">English
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Ethics
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                    <label class="major-box">Fashion Design
+                                        <input type="checkbox">
+                                        <span class="major-button"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="major-bottom">
+                                <div class="major-page">
+                                    <a id="page-one">1</a>
+                                    <a id="page-two">2</a>
+                                    <a id="more-page">...</a>
+                                </div>
+                                <div>
+                                    <button id="apply" onclick="closeMajorPopup()">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-popup" id="city-function">
+                            <div>
+                                <button id="close-popup" onclick="closeCityPopup()"><img src="/assets-home/close.png" id="close"></button>
+                            </div>
+                            <br>
+                            <div class="city-title">
+                                <h2>Indonesia</h2>
+                                <div class="search-popup">
+                                    <input type="text" name="search" id="search-text" placeholder="search major">
+                                    <a href=""><img src="/assets/search.svg" id="search-icon-popup"></a>
+                                </div>
+                            </div>
+                            <div class="city-list">
+                                <div class="city-left">
+                                    <label class="city-box">Ambon
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Balikpapan
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Banda Aceh
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bandar Lampung
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bandung
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Banjar
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Banjarbaru
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Banjarmasin
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Batam
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Batu                                    
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                </div>
+                                <div class="city-middle">
+                                    <label class="city-box">Baubau
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bekasi
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bengkulu
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bima
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Binjai
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bitung
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Blitar
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bogor
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bontang
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Bukittinggi
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                </div>
+                                <div class="city-right">
+                                    <label class="city-box">Cilegon
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Cimahi
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Cirebon
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Denpasar
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Dumai
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Gorontalo
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Gunungsitoli
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Jakarta Pusat
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Jakarta Selatan
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                    <label class="city-box">Jakarta Timur
+                                        <input type="checkbox">
+                                        <span class="city-button"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="city-bottom">
+                                <div class="city-page">
+                                    <a id="page-one">1</a>
+                                    <a id="page-two">2</a>
+                                    <a id="more-page">...</a>
+                                </div>
+                                <div>
+                                    <button id="apply" onclick="closeCityPopup()">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-right">
+                        <div class="info-container">
+                            <div class="detailinfo">
+                                <div class="picture">
+                                    <img src="/assets-home/latvia.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="Text">S1</div>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc1">
+                                        <b>Latvia State Scholarship</b>
+                                    </div>
+                                    <div class="loc">
+                                        <img src="/assets-home/loc.png" alt=""> 
+                                        <div class="loc-name">
+                                            <a class="googleMapPopUp" rel="nofollow" href="https://goo.gl/maps/33LDyH82fAkwmrBj8" target="_blank">Latvia</a>​ 
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <b style="color:#f2f2f2">Start      : 1 February 2022</b> <br>
+                                        <b style="color:rgb(209, 50, 50);">Deadline : 1 April 2022</b> <style></style>
+                                    </div>
+                                    <div class="read">
+                                        <a href="https://google.com">
+                                            <input type="submit" value="Read more">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="detailinfo">
+                                <div class="picture">
+                                    <img src="/assets-home/keio.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="Text">S1</div>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc1">
+                                        <b>Keio Univ. - International Undergraduate Program</b>
+                                    </div>
+                                    <div class="loc">
+                                        <img src="/assets-home/loc.png" alt=""> 
+                                        <div class="loc-name">
+                                            <a class="googleMapPopUp" rel="nofollow" href="https://goo.gl/maps/EyoMQoX4sHkKU5MMA" target="_blank">Japan</a>​ 
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <b style="color:#f2f2f2">Start      : 22 February 2022</b> <br>
+                                        <b style="color:rgb(209, 50, 50);">Deadline : 5 April 2022</b> <style></style>
+                                    </div>
+                                    <div class="read">
+                                        <a href="https://google.com">
+                                            <input type="submit" value="Read more">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="detailinfo">
+                                <div class="picture">
+                                    <img src="/assets-home/AIT.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="Text">S2 & S3</div>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc1">
+                                        <b>S2 & S3 FULL Scholarship (AIT) Thailand</b>
+                                    </div>
+                                    <div class="loc">
+                                        <img src="/assets-home/loc.png" alt=""> 
+                                        <div class="loc-name">
+                                            <a class="googleMapPopUp" rel="nofollow" href="https://goo.gl/maps/dCmcTKNsv6LkAb5w8" target="_blank">Asian Institute of Technology</a>​ 
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <b style="color:#f2f2f2">Start      : 1 January 2022</b> <br>
+                                        <b style="color:rgb(209, 50, 50);">Deadline : 28 January 2022</b> <style></style>
+                                    </div>
+                                    <div class="read">
+                                        <a href="https://google.com">
+                                            <input type="submit" value="Read more">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="detailinfo">
+                                <div class="picture">
+                                    <img src="/assets-home/itsb.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="Text">S1</div>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc1">
+                                        <b>Sinar Mas Agribusiness and Food 2022</b>
+                                    </div>
+                                    <div class="loc">
+                                        <img src="/assets-home/loc.png" alt=""> 
+                                        <div class="loc-name">
+                                            <a class="googleMapPopUp" rel="nofollow" href="https://g.page/itsbofficial?share" target="_blank">ITSB</a>​ 
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <b style="color:#f2f2f2">Start      : 4 February 2022</b> <br>
+                                        <b style="color:rgb(209, 50, 50);">Deadline : 31 March 2022</b> <style></style>
+                                    </div>
+                                    <div class="read">
+                                        <a href="https://google.com">
+                                            <input type="submit" value="Read more">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="detailinfo">
+                                <div class="picture">
+                                    <img src="/assets-home/dr-_goh_keng_swee_scholarship.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="Text">S1</div>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc1">
+                                        <b>Dr Goh Keng Swee (GKS) Scholarship</b>
+                                    </div>
+                                    <div class="loc">
+                                        <img src="/assets-home/loc.png" alt=""> 
+                                        <div class="loc-name">
+                                            <a class="googleMapPopUp" rel="nofollow" href="https://goo.gl/maps/osk3RedN14cB9TJJ8" target="_blank">Singapore</a>​ 
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <b style="color:#f2f2f2">Start      : 21 January 2022</b> <br>
+                                        <b style="color:rgb(209, 50, 50);">Deadline : 31 March 2022</b> <style></style>
+                                    </div>
+                                    <div class="read">
+                                        <a href="https://google.com">
+                                            <input type="submit" value="Read more">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="detailinfo">
+                                <div class="picture">
+                                    <img src="/assets-home/bri.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="Text">S1</div>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <div class="desc1">
+                                        <b>BRI Peduli Creation Scholarship</b>
+                                    </div>
+                                    <div class="loc">
+                                        <img src="/assets-home/loc.png" alt=""> 
+                                        <div class="loc-name">
+                                            <a class="googleMapPopUp" rel="nofollow" href="https://goo.gl/maps/TQ4iFZTvZcoZ2aKN9" target="_blank">Indonesia</a>​ 
+                                        </div>
+                                    </div>
+                                    <div class="date">
+                                        <b style="color:#f2f2f2">Start      : 24 March 2022</b> <br>
+                                        <b style="color:rgb(209, 50, 50);">Deadline : 16 June 2022</b> <style></style>
+                                    </div>
+                                    <div class="read">
+                                        <a href="https://google.com">
+                                            <input type="submit" value="Read more">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>   
+        </div>
+        <div class="page-number">
+            <div class="no1">
+                <div class="text2">1</div>
+                <!-- <a href="https://google.com">1</a> -->
+            </div>
+            <div class="no2">
+                <div class="text3">2</div>
+            </div>
+            <div class="no2">
+                <div class="text3">3</div>
+            </div>
+            <div class="arrow">
+                <img src="/assets-home/dropdown.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-left">
+            <div>
+                <p>SUBSCRIPTION</p>
+            </div>
+            <div>
+                <p>Want to get the latest scholarships information?
+                <br>Enter your email below.</p>
+            </div>
+            <div>
+                <input type="text" name="subscription" id="subscription" placeholder="Email">
+            </div>
+            <div>
+                <button><a href="/home.html">SUBSCRIBE</a></button>
+            </div>
+        </div>
+        <div class="footer-right">
+            Copyright © 2022 - ScholarPal
+            <div class="social-media">
+                <a href="https://twitter.com"><img src="/assets/TwitterLogo.png"></a>
+                <a href="https://instagram.com"><img src="/assets/InstagramLogo.png"></a>
+                <a href="https://facebook.com"><img src="/assets/facebookLogo.png"></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n){
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n){
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if(n > slides.length){
+            slideIndex = 1
+        }    
+        if(n < 1){
+            slideIndex = slides.length
+        }
+        for(i = 0; i < slides.length; i++){
+            slides[i].style.display = "none";  
+        }
+        for(i = 0; i < dots.length; i++){
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+    function openRegionPopup(){
+        document.getElementById("region-function").style.display = "block";
+    }
+    function closeRegionPopup(){
+        document.getElementById("region-function").style.display = "none";
+    }
+    function openCountryPopup(){
+        document.getElementById("country-function").style.display = "block";
+    }
+    function closeCountryPopup(){
+        document.getElementById("country-function").style.display = "none";
+    }
+    function openMajorPopup(){
+        document.getElementById("major-function").style.display = "block";
+    }
+    function closeMajorPopup(){
+        document.getElementById("major-function").style.display = "none";
+    }
+    function openCityPopup(){
+        document.getElementById("city-function").style.display = "block";
+    }
+    function closeCityPopup(){
+        document.getElementById("city-function").style.display = "none";
+    }
+    //tambahan 
+    $('.googleMapPopUp').each(function() {
+        var thisPopup = $(this);
+        thisPopup.colorbox({
+            iframe: true,
+            innerWidth: 400,
+            innerHeight: 300,
+            opacity: 0.7,
+            href: thisPopup.attr('href') + '&ie=UTF8&t=h&output=embed'
+        });
+    });
+</script>
+</html>
