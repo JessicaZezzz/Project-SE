@@ -1,0 +1,48 @@
+.profile-button{
+    background-color: #EBD5E8;
+    display: flex;
+    align-items: center;
+    margin-right: 4%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.profile-button b{
+    padding-right: 10px;
+}
+
+.profile-button img{
+    background-color: #f8e5f5;
+}
+
+.comment-profile{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    display: flex;
+}
+
+.profile-image img{
+    width: 50px;
+    border-radius: 100%;
+    background-color: #f8e5f5;
+    padding: 10%;
+}
+
+.profile-comment-content{
+    padding-left: 2%;
+}
+
+.tab{
+    padding-left: 5%;
+}
+
+.comment-header t{
+    color: gray;
+}
+
+.profile-content{
+    padding-top: 2%;
+}
