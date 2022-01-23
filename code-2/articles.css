@@ -57,19 +57,7 @@
     padding-right: 40px;
 }
 
-.top{
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid white;
-}
-
-.middle{
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid white;
-}
-
-.bottom{
+.right-content-content{
     display: flex;
     align-items: center;
     border-bottom: 2px solid white;
