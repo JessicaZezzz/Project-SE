@@ -16,7 +16,7 @@
 .left-content-imagebox{
     width: 707px;
     height: 471px;
-    background-image: url(/assets/scholarships-banner.jpg);
+    background-image: url(assets/scholarships-banner.jpg);
     background-size: cover;
     margin-top: 15px;
     border-radius: 15px;
