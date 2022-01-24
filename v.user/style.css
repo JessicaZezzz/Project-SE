@@ -63,15 +63,19 @@ body{
 .search{
     background-color: var(--btn);
     width: 160px;
+    height: 20px;
     padding: 2px;
     border-radius: 20px;
     text-align: center;
+    align-items: center;
 }
 
 #search{
     width: 130px;
     background-color: var(--btn);
     border: 0px;
+    height: 1px;
+    margin: -2px;
 }
 
 #search-icon{
@@ -173,9 +177,9 @@ body{
     height: 85px;
 }
 
-.logo2{
+/* .logo2{
 
-}
+} */
 
 .des{
     text-align: center;
