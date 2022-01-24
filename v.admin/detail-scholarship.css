@@ -21,7 +21,7 @@
 .content-top-imagebox{
     width: 159px;
     height: 112px;
-    background-image: url(/assets/chevening.jpg);
+    background-image: url(assets/chevening.jpg);
     background-size: cover;
 }
 
